@@ -3,6 +3,7 @@ import React from 'react'
 import Script from 'next/script'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
+import AnimatedBackground from '../components/AnimatedBackground'
 
 export const metadata = {
   title: 'Process Improvement Consulting',
@@ -33,9 +34,10 @@ gtag('config', '${gaId}');`}
         )}
       </head>
       <body>
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col relative">
+          <AnimatedBackground />
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 relative z-10">{children}</main>
           <Footer />
         </div>
       </body>
