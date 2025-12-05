@@ -1,6 +1,11 @@
 import React from 'react'
 import Hero from '../components/Hero'
 
+export const metadata = {
+  title: 'Process Improvement Consulting | Home',
+  description: 'Sell your process improvement service. Book a free process audit.',
+}
+
 export default function HomePage() {
   return (
     <section className="px-6 py-12 max-w-4xl mx-auto">

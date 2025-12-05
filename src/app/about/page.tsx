@@ -1,5 +1,10 @@
 import React from 'react'
 
+export const metadata = {
+  title: 'About | Process Improvement Consulting',
+  description: 'Learn about the process improvement consultant, their approach, and values.',
+}
+
 export default function AboutPage() {
   return (
     <section className="px-6 py-12 max-w-3xl mx-auto">

@@ -1,6 +1,11 @@
 import React from 'react'
 import ContactForm from '../../components/ContactForm'
 
+export const metadata = {
+  title: 'Contact | Process Improvement Consulting',
+  description: 'Send a message or book a call with the process improvement consultant.',
+}
+
 export default function ContactPage() {
   return (
     <section className="px-6 py-12 max-w-3xl mx-auto">
