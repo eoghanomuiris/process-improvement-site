@@ -7,11 +7,11 @@ export const translations = {
     bookCall: "Book a call",
 
     // Home page
-    isThisYouTitle: "Is this you?",
+    isThisYouTitle: "Does this sound familiar?",
     isThisYouText1:
-      "You're a solo founder or small business owner. You know your process should be cleaner, faster, more scalable—but you don't have time to figure it out yourself.",
+      "Your team is drowning in manual tasks. Processes exist—but only in people's heads. Growth feels impossible because there's no clear system to scale.",
     isThisYouText2:
-      "You want clarity and simple, actionable insights that respect your brand and actually work for a small team.",
+      "You need processes that actually work for your business. Just clarity and simple, actionable improvements.",
 
     // What's Included
     whatsIncluded: "What's Included",

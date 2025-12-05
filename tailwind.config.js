@@ -7,7 +7,29 @@ module.exports = {
     extend: {
       colors: {
         accent: '#14B8A6',
-        bg: '#FAFAF9'
+        'accent-dark': '#0D9488',
+        'accent-light': '#2DD4BF',
+        bg: '#FAFAF9',
+        slate: {
+          850: '#1E293B'
+        }
+      },
+      fontSize: {
+        'hero': ['4rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }]
+      },
+      animation: {
+        'float': 'float 3s ease-in-out infinite',
+        'shimmer': 'shimmer 2s infinite'
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' }
+        }
       }
     }
   },

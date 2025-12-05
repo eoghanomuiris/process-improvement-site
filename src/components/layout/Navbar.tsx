@@ -19,31 +19,31 @@ export default function Navbar() {
   const handleMenuItemClick = () => setOpen(false)
 
   return (
-    <header className={`sticky top-0 z-40 transition-shadow ${scrolled ? 'backdrop-blur bg-white/60 shadow-md' : 'bg-transparent'}`}>
-      <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <header className={`sticky top-0 z-40 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/80 shadow-lg border-b border-gray-200' : 'bg-transparent'}`}>
+      <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <a href="#" className="text-lg font-bold hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded px-2 py-1">
+          <a href="#" className="text-xl font-bold hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded px-2 py-1">
             StrategicGrowth
           </a>
         </div>
 
-        <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-          <a href="#about" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
+        <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <a href="#about" className="text-gray-700 font-medium hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
             {t('about')}
           </a>
-          <a href="#services" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
+          <a href="#services" className="text-gray-700 font-medium hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
             {t('services')}
           </a>
-          <a href="#contact" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
+          <a href="#contact" className="text-gray-700 font-medium hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
             {t('contact')}
           </a>
-          <div className="flex items-center gap-2 border-l pl-6 ml-2">
+          <div className="flex items-center gap-3 border-l border-gray-300 pl-8 ml-4">
             <button
               onClick={() => setLanguage('en')}
-              className={`px-2 py-1 rounded transition-colors ${
+              className={`px-3 py-1.5 rounded-md font-medium transition-all duration-200 ${
                 language === 'en'
                   ? 'bg-accent text-white'
-                  : 'hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent'
+                  : 'text-gray-600 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent'
               }`}
               aria-label="English"
             >
@@ -51,19 +51,16 @@ export default function Navbar() {
             </button>
             <button
               onClick={() => setLanguage('it')}
-              className={`px-2 py-1 rounded transition-colors ${
+              className={`px-3 py-1.5 rounded-md font-medium transition-all duration-200 ${
                 language === 'it'
                   ? 'bg-accent text-white'
-                  : 'hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent'
+                  : 'text-gray-600 hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent'
               }`}
               aria-label="Italiano"
             >
               IT
             </button>
           </div>
-          <a href="#contact" className="px-3 py-2 bg-accent text-white rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
-            {t('bookCall')}
-          </a>
         </nav>
 
         <div className="md:hidden">
@@ -81,21 +78,21 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-white/95 border-t" aria-label="Mobile navigation">
+        <nav className="md:hidden bg-white/95 backdrop-blur border-t border-gray-200" aria-label="Mobile navigation">
           <div className="px-6 py-4 flex flex-col gap-3">
-            <a href="#about" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">{t('about')}</a>
-            <a href="#services" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">{t('services')}</a>
-            <a href="#contact" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">{t('contact')}</a>
-            <div className="flex items-center gap-2 pt-2 border-t">
+            <a href="#about" onClick={handleMenuItemClick} className="text-gray-700 font-medium hover:text-accent transition-colors">{t('about')}</a>
+            <a href="#services" onClick={handleMenuItemClick} className="text-gray-700 font-medium hover:text-accent transition-colors">{t('services')}</a>
+            <a href="#contact" onClick={handleMenuItemClick} className="text-gray-700 font-medium hover:text-accent transition-colors">{t('contact')}</a>
+            <div className="flex items-center gap-2 pt-4 border-t border-gray-200">
               <button
                 onClick={() => {
                   setLanguage('en')
                   handleMenuItemClick()
                 }}
-                className={`px-2 py-1 rounded transition-colors ${
+                className={`px-3 py-1.5 rounded-md font-medium transition-all duration-200 ${
                   language === 'en'
                     ? 'bg-accent text-white'
-                    : 'hover:text-accent'
+                    : 'text-gray-600 hover:text-accent'
                 }`}
               >
                 EN
@@ -105,10 +102,10 @@ export default function Navbar() {
                   setLanguage('it')
                   handleMenuItemClick()
                 }}
-                className={`px-2 py-1 rounded transition-colors ${
+                className={`px-3 py-1.5 rounded-md font-medium transition-all duration-200 ${
                   language === 'it'
                     ? 'bg-accent text-white'
-                    : 'hover:text-accent'
+                    : 'text-gray-600 hover:text-accent'
                 }`}
               >
                 IT
