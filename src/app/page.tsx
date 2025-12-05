@@ -13,33 +13,74 @@ export default function HomePage() {
 
       <section className="mt-12">
         <h2 className="text-2xl font-semibold mb-4">Is this you?</h2>
-        <p className="text-gray-700">You’re a solo founder or small team, things feel chaotic, repeatable work keeps getting in the way of growth. You want clarity and simplicity.</p>
+        <p className="text-gray-700 mb-2">You're a solo founder or small business owner. You know your process should be cleaner, faster, more scalable—but you don't have time to figure it out yourself.</p>
+        <p className="text-gray-700">You want clarity and simple, actionable insights that respect your brand and actually work for a small team.</p>
       </section>
 
       <section className="mt-10">
-        <h2 className="text-2xl font-semibold mb-4">Services</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="p-6 bg-white rounded-lg shadow-sm">Process auditing — identify quick wins</div>
-          <div className="p-6 bg-white rounded-lg shadow-sm">Automation & tooling recommendations</div>
-          <div className="p-6 bg-white rounded-lg shadow-sm">SOPs & training materials</div>
-          <div className="p-6 bg-white rounded-lg shadow-sm">Retainer process coaching</div>
+        <h2 className="text-2xl font-semibold mb-6">What's Included</h2>
+        <div className="bg-white rounded-lg shadow-sm p-8">
+          <ul className="space-y-3 text-gray-700">
+            <li className="flex items-start">
+              <span className="text-accent mr-3 font-semibold">✓</span>
+              <span><strong>Initial discussion</strong> — understand your business, goals, and pain points</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-accent mr-3 font-semibold">✓</span>
+              <span><strong>Deep review</strong> — we observe and map your selected processes in detail</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-accent mr-3 font-semibold">✓</span>
+              <span><strong>Clear process maps</strong> — visual, step-by-step documentation of how things work today</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-accent mr-3 font-semibold">✓</span>
+              <span><strong>Future-state design</strong> — a cleaner, faster, more scalable version of your processes</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-accent mr-3 font-semibold">✓</span>
+              <span><strong>Practical report</strong> — actionable next steps you can implement immediately</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-accent mr-3 font-semibold">✓</span>
+              <span><strong>Optional ongoing support</strong> — help implementing changes and fine-tuning as you grow</span>
+            </li>
+          </ul>
         </div>
       </section>
 
       <section className="mt-10">
-        <h2 className="text-2xl font-semibold mb-4">How it works</h2>
-        <ol className="space-y-4">
-          <li className="p-4 bg-white rounded-lg shadow-sm">1. Book a free process audit</li>
-          <li className="p-4 bg-white rounded-lg shadow-sm">2. We map the process & find friction</li>
-          <li className="p-4 bg-white rounded-lg shadow-sm">3. Quick wins + roadmap</li>
-        </ol>
+        <h2 className="text-2xl font-semibold mb-6">Our Process</h2>
+        <div className="space-y-4">
+          <div className="p-4 bg-white rounded-lg shadow-sm border-l-4 border-accent">
+            <h3 className="font-semibold text-gray-900">1. Understand</h3>
+            <p className="text-gray-600 text-sm mt-1">We learn your business, priorities, and the specific processes causing friction.</p>
+          </div>
+          <div className="p-4 bg-white rounded-lg shadow-sm border-l-4 border-accent">
+            <h3 className="font-semibold text-gray-900">2. Map</h3>
+            <p className="text-gray-600 text-sm mt-1">Clear documentation of how things work today—every step, every decision point, every bottleneck.</p>
+          </div>
+          <div className="p-4 bg-white rounded-lg shadow-sm border-l-4 border-accent">
+            <h3 className="font-semibold text-gray-900">3. Review</h3>
+            <p className="text-gray-600 text-sm mt-1">We identify friction, inefficiencies, and opportunities for improvement with fresh eyes.</p>
+          </div>
+          <div className="p-4 bg-white rounded-lg shadow-sm border-l-4 border-accent">
+            <h3 className="font-semibold text-gray-900">4. Design</h3>
+            <p className="text-gray-600 text-sm mt-1">A cleaner, faster, more scalable future version of your process—built for your team's reality.</p>
+          </div>
+          <div className="p-4 bg-white rounded-lg shadow-sm border-l-4 border-accent">
+            <h3 className="font-semibold text-gray-900">5. Report</h3>
+            <p className="text-gray-600 text-sm mt-1">A practical roadmap with clear next steps you can start implementing right away.</p>
+          </div>
+        </div>
       </section>
 
       <section className="mt-12 border-t pt-8">
-        <h3 className="text-xl font-semibold">Ready to get clarity?</h3>
-        <p className="mt-2">Book a free audit or send a quick message via the contact form.</p>
-        <div className="mt-4">
-          <a href="/contact" className="inline-block px-5 py-3 rounded-md bg-accent text-white">Book a free process audit</a>
+        <h3 className="text-xl font-semibold">Ready to reclaim your time?</h3>
+        <p className="mt-2 text-gray-700">Let's talk about your processes and explore how you can build a business that scales without burning you out.</p>
+        <div className="mt-6 flex gap-4">
+          <a href="/contact" className="inline-block px-6 py-3 rounded-md bg-accent text-white font-medium hover:opacity-90 transition">Book a free consultation</a>
+          <a href="/about" className="inline-block px-6 py-3 rounded-md border-2 border-accent text-accent font-medium hover:bg-accent hover:text-white transition">Learn more about us</a>
         </div>
       </section>
     </section>
