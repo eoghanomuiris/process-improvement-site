@@ -7,7 +7,7 @@ interface TypeWriterProps {
   delay?: number
 }
 
-export default function TypeWriter({ text, speed = 50, delay = 0 }: TypeWriterProps) {
+export default function TypeWriter({ text, speed = 80, delay = 0 }: TypeWriterProps) {
   const [displayedText, setDisplayedText] = useState('')
   const [isComplete, setIsComplete] = useState(false)
 
@@ -39,7 +39,7 @@ export default function TypeWriter({ text, speed = 50, delay = 0 }: TypeWriterPr
   return (
     <span>
       {displayedText}
-      {!isComplete && <span className="animate-pulse">|</span>}
+      <span className="ml-1 inline-block w-[2px] h-[1.2em] bg-black align-middle blink-caret" aria-hidden />
     </span>
   )
 }

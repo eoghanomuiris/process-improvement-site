@@ -56,6 +56,16 @@ p {
   outline-offset: 2px;
 }
 
+/* Blink caret */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+.blink-caret {
+  animation: blink 1s steps(2, start) infinite;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
