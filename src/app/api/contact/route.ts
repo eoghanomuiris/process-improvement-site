@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     if (process.env.RESEND_API_KEY) {
       try {
         // Lazy import to avoid requiring the package during scaffolding
-        const { Resend } = await import('@resend/resend')
+        const { Resend } = await import('resend')
         const resend = new Resend(process.env.RESEND_API_KEY)
         const to = process.env.CONTACT_RECEIVER_EMAIL || process.env.RESEND_FROM || ''
         if (to) {
