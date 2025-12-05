@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -21,24 +20,24 @@ export default function Navbar() {
     <header className={`sticky top-0 z-40 transition-shadow ${scrolled ? 'backdrop-blur bg-white/60 shadow-md' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link href="/" className="text-lg font-bold hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded px-2 py-1">
+          <a href="#" className="text-lg font-bold hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded px-2 py-1">
             YourName
-          </Link>
+          </a>
         </div>
 
         <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-          <Link href="/" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
+          <a href="#about" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
             About
-          </Link>
-          <Link href="/contact" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
+          </a>
+          <a href="#services" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
+            Services
+          </a>
+          <a href="#contact" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
             Contact
-          </Link>
-          <Link href="/contact" className="px-3 py-2 bg-accent text-white rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
+          </a>
+          <a href="#contact" className="px-3 py-2 bg-accent text-white rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
             Book a call
-          </Link>
+          </a>
         </nav>
 
         <div className="md:hidden">
@@ -58,9 +57,9 @@ export default function Navbar() {
       {open && (
         <nav className="md:hidden bg-white/95 border-t" aria-label="Mobile navigation">
           <div className="px-6 py-4 flex flex-col gap-3">
-            <Link href="/" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">Home</Link>
-            <Link href="/about" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">About</Link>
-            <Link href="/contact" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">Contact</Link>
+            <a href="#about" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">About</a>
+            <a href="#services" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">Services</a>
+            <a href="#contact" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">Contact</a>
           </div>
         </nav>
       )}
