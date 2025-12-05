@@ -1,9 +1,11 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const { language, setLanguage, t } = useLanguage()
 
   useEffect(() => {
     function onScroll() {
@@ -27,16 +29,40 @@ export default function Navbar() {
 
         <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
           <a href="#about" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
-            About
+            {t('about')}
           </a>
           <a href="#services" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
-            Services
+            {t('services')}
           </a>
           <a href="#contact" className="hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded px-2 py-1">
-            Contact
+            {t('contact')}
           </a>
+          <div className="flex items-center gap-2 border-l pl-6 ml-2">
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-2 py-1 rounded transition-colors ${
+                language === 'en'
+                  ? 'bg-accent text-white'
+                  : 'hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent'
+              }`}
+              aria-label="English"
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage('it')}
+              className={`px-2 py-1 rounded transition-colors ${
+                language === 'it'
+                  ? 'bg-accent text-white'
+                  : 'hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent'
+              }`}
+              aria-label="Italiano"
+            >
+              IT
+            </button>
+          </div>
           <a href="#contact" className="px-3 py-2 bg-accent text-white rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
-            Book a call
+            {t('bookCall')}
           </a>
         </nav>
 
@@ -57,9 +83,37 @@ export default function Navbar() {
       {open && (
         <nav className="md:hidden bg-white/95 border-t" aria-label="Mobile navigation">
           <div className="px-6 py-4 flex flex-col gap-3">
-            <a href="#about" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">About</a>
-            <a href="#services" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">Services</a>
-            <a href="#contact" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">Contact</a>
+            <a href="#about" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">{t('about')}</a>
+            <a href="#services" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">{t('services')}</a>
+            <a href="#contact" onClick={handleMenuItemClick} className="hover:text-accent transition-colors">{t('contact')}</a>
+            <div className="flex items-center gap-2 pt-2 border-t">
+              <button
+                onClick={() => {
+                  setLanguage('en')
+                  handleMenuItemClick()
+                }}
+                className={`px-2 py-1 rounded transition-colors ${
+                  language === 'en'
+                    ? 'bg-accent text-white'
+                    : 'hover:text-accent'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => {
+                  setLanguage('it')
+                  handleMenuItemClick()
+                }}
+                className={`px-2 py-1 rounded transition-colors ${
+                  language === 'it'
+                    ? 'bg-accent text-white'
+                    : 'hover:text-accent'
+                }`}
+              >
+                IT
+              </button>
+            </div>
           </div>
         </nav>
       )}

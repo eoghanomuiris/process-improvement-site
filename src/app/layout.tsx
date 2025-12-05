@@ -4,6 +4,7 @@ import Script from 'next/script'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import AnimatedBackground from '../components/AnimatedBackground'
+import { LanguageProvider } from '../i18n/LanguageContext'
 
 export const metadata = {
   title: 'Process Improvement Consulting',
@@ -34,12 +35,14 @@ gtag('config', '${gaId}');`}
         )}
       </head>
       <body>
-        <div className="min-h-screen flex flex-col relative">
-          <AnimatedBackground />
-          <Navbar />
-          <main className="flex-1 relative z-10">{children}</main>
-          <Footer />
-        </div>
+        <LanguageProvider>
+          <div className="min-h-screen flex flex-col relative">
+            <AnimatedBackground />
+            <Navbar />
+            <main className="flex-1 relative z-10">{children}</main>
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   )

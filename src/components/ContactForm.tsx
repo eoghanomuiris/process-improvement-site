@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const ContactSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -15,6 +16,7 @@ const ContactSchema = z.object({
 type ContactFormValues = z.infer<typeof ContactSchema>
 
 export default function ContactForm() {
+  const { t } = useLanguage()
   const [status, setStatus] = useState<'idle'|'sending'|'success'|'error'>('idle')
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormValues>({ resolver: zodResolver(ContactSchema) })
 
@@ -41,7 +43,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-6 rounded-lg shadow-sm" noValidate>
       <div>
-        <label htmlFor="name" className="block text-sm font-medium">Name</label>
+        <label htmlFor="name" className="block text-sm font-medium">{t('name')}</label>
         <input
           {...register('name')}
           id="name"
@@ -65,7 +67,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="business" className="block text-sm font-medium">Business name (optional)</label>
+        <label htmlFor="business" className="block text-sm font-medium">{t('business')}</label>
         <input
           {...register('business')}
           id="business"
@@ -74,7 +76,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium">Email</label>
+        <label htmlFor="email" className="block text-sm font-medium">{t('email')}</label>
         <input
           {...register('email')}
           id="email"
@@ -99,7 +101,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium">What feels most chaotic right now?</label>
+        <label htmlFor="message" className="block text-sm font-medium">{t('message')}</label>
         <textarea
           {...register('message')}
           id="message"
@@ -129,7 +131,7 @@ export default function ContactForm() {
           disabled={status === 'sending'}
           className="inline-flex items-center px-4 py-2 bg-accent text-white rounded-md hover:bg-opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
         >
-          {status === 'sending' ? 'Sending…' : 'Send message'}
+          {status === 'sending' ? t('sending') : 'Send message'}
         </button>
       </div>
 
