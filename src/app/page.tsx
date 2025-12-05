@@ -9,7 +9,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <section className="px-6 py-12 max-w-4xl mx-auto">
+      <section className="px-6 py-12 max-w-6xl mx-auto lg:max-w-7xl">
         <Hero />
 
         <section className="mt-12">

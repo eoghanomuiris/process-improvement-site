@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="px-6 py-12 max-w-3xl mx-auto">
+    <section className="px-6 py-12 max-w-6xl mx-auto lg:max-w-7xl">
       <h1 className="text-3xl font-bold mb-6">Let's talk about your processes</h1>
       <p className="text-gray-700 mb-8">Send a quick message or book a call using the form and calendar below.</p>
 
