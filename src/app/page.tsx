@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Hero from '../components/Hero'
+import ContactForm from '../components/ContactForm'
 import { useLanguage } from '../i18n/LanguageContext'
 
 export default function HomePage() {
@@ -130,12 +131,22 @@ export default function HomePage() {
         </section>
 
         <section className="mt-12 border-t pt-8" id="contact">
-          <h3 className="text-xl font-semibold">{t('readyReclaim')}</h3>
-          <p className="mt-2 text-gray-700">{t('readyText')}</p>
-          <div className="mt-6 flex gap-4 flex-wrap">
-            <a href="/contact" className="inline-block px-6 py-3 rounded-md bg-accent text-white font-medium hover:opacity-90 transition">
-              {t('bookConsultation')}
-            </a>
+          <h2 className="text-3xl font-bold mb-6">{t('contactTitle')}</h2>
+          <p className="text-gray-700 mb-8">{t('contactSubtitle')}</p>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">{t('sendMessage')}</h3>
+              <ContactForm />
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">{t('bookCallTitle')}</h3>
+              <div className="aspect-video bg-white rounded-lg shadow-sm overflow-hidden sticky top-20">
+                {/* Placeholder Calendly iframe - replace URL with your Calendly link */}
+                <iframe src="https://calendly.com/" title="Calendly booking" className="w-full h-full" />
+              </div>
+            </div>
           </div>
         </section>
       </section>
