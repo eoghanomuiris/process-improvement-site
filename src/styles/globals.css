@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FAFAF9;
+  --accent: #14B8A6;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* simple focus styles */
+:focus {
+  outline: 3px solid rgba(20,184,166,0.15);
+  outline-offset: 2px;
+}
