@@ -1,8 +1,10 @@
 'use client'
 import React from 'react'
 import TypeWriter from './animations/TypeWriter'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLanguage()
   return (
     <header className="py-12">
       <div className="max-w-3xl mx-auto text-center">
