@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <a href="#" className="text-lg font-bold hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded px-2 py-1">
-            YourName
+            StrategicGrowth
           </a>
         </div>
 
