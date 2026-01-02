@@ -6,13 +6,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: '#14B8A6',
-        'accent-dark': '#0D9488',
-        'accent-light': '#2DD4BF',
-        bg: '#FAFAF9',
+        accent: '#F26722',
+        'accent-dark': '#B1450B',
+        'accent-light': '#F26722',
+        'foxfire': '#F26722',
+        'deep-ember': '#B1450B',
+        'charcoal': '#2D2D2D',
+        'soft-ivory': '#FAF8F6',
+        'mist-gray': '#A7A7A7',
+        bg: '#FAF8F6',
         slate: {
           850: '#1E293B'
         }
+      },
+      fontFamily: {
+        sans: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
       },
       fontSize: {
         'hero': ['4rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }]

@@ -22,8 +22,8 @@ export default function Navbar() {
     <header className={`sticky top-0 z-40 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/80 shadow-lg border-b border-gray-200' : 'bg-transparent'}`}>
       <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <a href="#" className="text-xl font-bold hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded px-2 py-1">
-            StrategicGrowth
+          <a href="#" className="flex items-center hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded">
+            <img src="/volpra-logo.png" alt="Volpra" className="h-20 w-auto" />
           </a>
         </div>
 

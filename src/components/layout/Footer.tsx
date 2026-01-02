@@ -7,8 +7,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="font-bold text-lg mb-2">StrategicGrowth</h3>
-            <p className="text-gray-600 text-sm">Process improvement consulting for growing businesses.</p>
+            <h3 className="font-bold text-lg mb-2">VOLPRA</h3>
+            <p className="text-gray-600 text-sm font-medium mb-1">Smarter Systems. Human Flow.</p>
+            <p className="text-gray-600 text-sm">Helping businesses simplify, scale, and grow through intelligent process improvement.</p>
           </div>
 
           {/* Navigation */}
@@ -27,14 +28,14 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="https://linkedin.com" className="text-gray-600 hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://twitter.com" className="text-gray-600 hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-              <li><a href="mailto:hello@strategicgrowth.com" className="text-gray-600 hover:text-accent transition-colors">Email</a></li>
+              <li><a href="mailto:hello@volpra.com" className="text-gray-600 hover:text-accent transition-colors">Email</a></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
-          <div>© {new Date().getFullYear()} StrategicGrowth. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Volpra Consulting. All Rights Reserved.</div>
           <div className="mt-4 sm:mt-0 flex gap-6">
             <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>

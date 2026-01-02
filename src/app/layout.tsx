@@ -7,8 +7,8 @@ import AnimatedBackground from '../components/AnimatedBackground'
 import { LanguageProvider } from '../i18n/LanguageContext'
 
 export const metadata = {
-  title: 'Process Improvement Consulting',
-  description: 'Small business process improvement — Book a free audit.',
+  title: 'Volpra - Smarter Systems. Human Flow.',
+  description: 'Intelligent process improvement consulting. We help businesses simplify, scale, and grow through mindful innovation.',
   icons: { icon: '/favicon.ico' }
 }
 
